@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import Card from './Components/PokemonCards.jsx'
 
+
 function App() {
 
   return (

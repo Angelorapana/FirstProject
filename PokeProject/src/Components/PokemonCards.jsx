@@ -13,16 +13,22 @@ function PokemonCards() {
   }, [])
 
  return (
-  <div>
-    <h1>Pokemon Cards</h1>
-    <ul>
-      {pokemon.map((poke, index) => (
-        <li key={index}>{poke.name}</li>
-      ))}
-    </ul>
-  </div>
- )
+    <div className="container">
+      <h1 className="text-center">Pokemon Cards</h1>
+      <div className="row">
+        {pokemon.map((poke, index) => (
+          <div className="col-3" key={index}>
+            <div className="card mb-4">
+              <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index + 1}.png`} className="card-img-top" alt={poke.name} />
+              <div className="card-body">
+                <h5 className="card-title">{poke.name}</h5>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
 }
-
+ 
 export default PokemonCards
-
